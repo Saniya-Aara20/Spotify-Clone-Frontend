@@ -1,0 +1,411 @@
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900 */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:500;
+  font-style: normal;
+  margin: 0;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+  /* overflowed content is hidden, overflow:scroll means we can scroll and see and here we dont want to scroll body, only main content can be scrolled */
+
+  
+}
+
+.main
+{
+    display: flex;
+    height: 100vh;
+    padding: 0.5rem;
+}
+
+.sidebar
+{
+    
+    width: 320px;
+    border-radius: 1rem;  
+    /* 1 rem=16px */
+    background-color: black;
+    margin-right: 0.5rem;
+}
+.main-content
+{
+    
+    flex: 1;
+    /* other containers get their wanted space and remaining all give to me| */
+    border-radius: 1rem;
+    overflow: auto;
+    /* scroll shown when required */
+    background-color: rgb(37, 35, 35);
+    padding: 0 1.5rem 0 1.5rem;
+}
+
+.music-player
+{
+    
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    display: flex;
+}
+
+a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.nav 
+{
+    background-color: #232323;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+}
+
+.nav-option
+{
+    line-height: 2.5rem;
+    opacity: 0.7;
+    padding: 0.5rem 0.75rem;
+}
+
+.nav-option a 
+{
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.nav-option i 
+{
+    font-size: 1.25rem;
+}
+
+.nav-option:hover
+{
+    opacity: 1;
+    font-weight: 600;
+   
+    
+
+}
+
+.library
+{
+    background-color: rgb(37, 35, 35);
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+}
+
+.options
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lib-options img 
+{
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.icons
+{
+    font-size: 1.25rem;
+    display: flex;
+}
+
+.icons i 
+{
+    opacity: 0.7;
+    margin-right: 1rem;
+}
+
+.icons i:hover 
+{
+    opacity: 1;
+}
+
+.box
+{
+    background-color: rgb(56, 54, 54);
+    height: 9rem;
+    border-radius: 0.75rem;
+    margin: 0.2rem 0.1rem 0;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.box-p1
+{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.box-p2
+{
+    font-size: 0.7rem;
+    opacity: 0.8;
+    
+}
+
+.badge
+{
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top: 0.6rem;
+    height: 1.75rem;
+    width: fit-content;
+}
+
+.sticky-nav
+{
+    position: sticky;
+    top:0;
+    background-color: rgb(37, 35, 35);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    z-index: 2;
+}
+
+.sticky-icons img
+{
+    margin-left: 0.75rem;
+}
+
+.sticky-options
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item
+{
+    margin-right: 1rem;
+}
+
+.dark-badge
+{
+    background-color: black;
+    color: white;
+}
+
+@media (max-width:1000px)
+{
+    .hide 
+    {
+        display: none;
+    }
+}
+
+.card
+{
+    background-color:rgb(56, 54, 54);
+    width: 200px;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+    transition-delay: 0.2s;
+    transition-timing-function: ease;
+    
+}
+.card:hover 
+{
+    /* box-shadow: 2px 10px 10px rgb(125, 122, 122); */
+    border: 1px solid gray;
+
+}
+.cards-container
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-img
+{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.card-title
+{
+    font-weight: 600;
+}
+.card-info
+{
+    font-size: 0.85rem;
+    opacity: 0.5;
+}
+
+.footer
+{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line
+{
+    width: 90%;
+    height: 40%;
+    border-top: 1px solid white;
+    opacity: 0.4;
+}
+
+.left
+{
+    margin-left: 1rem;
+    width: 20rem;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.album img
+{
+    height: 4rem;
+    width: 4rem;
+    padding: 5px 5px;
+}
+
+.album-info
+{
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+}
+.singer
+{
+    font-size: 14px;
+    opacity: 0.5;
+    margin-top: 2px;
+    opacity: 0.5;
+    
+}
+
+.singer:hover 
+{
+    text-decoration: underline;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.song
+{
+    opacity: 0.85;
+}
+
+.song:hover
+{
+    opacity: 1;
+    /* text-decoration: underline; */
+    cursor: pointer;
+}
+.album-icons
+{
+    margin-left: 0.7rem;
+}
+
+.album-icons .i1,.i2
+{
+    margin-right: 1rem;
+}
+
+.album-icons .i1:hover, .i2:hover
+{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.right img
+{
+    height: 2rem;
+    width: 16rem;
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
+}
+
+.mid-icons
+{
+    width: 12rem;
+    display: flex;
+    position: absolute;
+    left: 42%;
+    top: 1rem;
+    justify-content: space-between;
+}
+
+
+.mid-icons .mid 
+{
+    height: 0.75rem;
+    width: 0.75rem;
+    position: fixed;
+    bottom: 3rem;
+    opacity: 0.7;
+    
+
+}
+
+.mid-icons .mid:hover 
+{
+    opacity: 1;
+    
+}
+
+.playback-bar
+{
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 38%;
+    bottom: 0.5rem;
+}
+
+.progress-bar
+{
+    width: 90%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    /* opacity: 0.7; */
+    
+}
+
+.progress-bar::-webkit-slider-runnable-track
+{
+    background-color: whitesmoke;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+.progress-bar::-webkit-slider-thumb
+{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
